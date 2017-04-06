@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+        
+     
+     <bean id="user" class="com.framestudy.spring.pojos.User">
+     	<!-- <property name="userName" value="xiaomi"></property>
+     	<property name="password" value="123456"></property> -->
+     
+     	<constructor-arg index="0" value="xiaomi"></constructor-arg>
+     	<constructor-arg index="1" value="123456"></constructor-arg>
+     </bean>
+     
+     <bean id="userInfoServiceImpl" class="com.framestudy.spring.service.impl.UserInfoServiceImpl" autowire="constructor">
+     	<!-- <property name="dao" ref="userInfoDaoImpl"></property> -->
+     </bean>
+     <bean id="userInfoDaoImpl" class="com.framestudy.spring.dao.impl.UserInfoDaoImpl"></bean>
+ </beans>       
